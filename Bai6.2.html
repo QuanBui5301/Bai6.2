@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6.2</title>
+</head>
+<body>
+<input id="day" type="text">
+<Button onclick="dayOfTheMonth()">Tính số ngày</Button>
+<br>
+<h3 id="days-in-month">... days</h3>
+<script>
+    function dayOfTheMonth() {
+        let day = +document.getElementById("day").value
+        switch (day) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: document.getElementById("days-in-month").innerText = "Thang " + day + " co 31 days"
+                console.log("\"Thang\" + day + \"co 31 days\"")
+                break
+            case 2: document.getElementById("days-in-month").innerText = "Thang " + day + " co 28 days"
+                console.log("\"Thang\" + day + \"co 31 days\"")
+                break
+            case 4:
+            case 6:
+            case 9:
+            case 11: document.getElementById("days-in-month").innerText = "Thang " + day + " co 30 days"
+                console.log("\"Thang\" + day + \"co 31 days\"")
+                break
+            default: document.getElementById("days-in-month").innerText = "Không tồn tại tháng này!"
+        }
+    }
+</script>
+</body>
+</html>
